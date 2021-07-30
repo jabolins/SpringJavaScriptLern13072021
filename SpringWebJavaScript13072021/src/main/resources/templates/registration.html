@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>logIn</title>
+</head>
+<body>
+
+<form id="registrationForm" method="post" >
+
+<label for="name">Vārds</label>
+<input type="text" id="name" name="name" placeholder="Vārds"><br><br>
+
+<label for="password">Parole</label>
+<input type="password" id="password" name="password" placeholder="Parole"> <br><br>
+
+<label for="rePassword">Parole atkārtoti</label>
+<input type="password" id="rePassword" name="rePassword" placeholder="Parole atkārtoti"><br><br>
+
+<span>Dzimums</span>
+<input type="radio" name="state" id="male" value="male">
+<label for="male">Vīrietis</label>
+<input type="radio" name="state" id="female" value="female">
+<label for="female">Sieviete</label><br><br>
+
+
+<label for="dateOfBirth">Dzimšanas datums</label>
+    <!-- ir problēmas javaScript tāpēc pagaidām uztaisām atpakaļ us String
+<input type="date" id="dateOfBirth" name="dateOfBirth"><br><br>
+-->
+
+    <input type="date" id="dateOfBirth" name="dateOfBirth" placeholder="Dzimšanas datums"><br><br>
+
+<!-- nākošajā rindiņā sagatavojamies ja būs kāds kļūdas paziņojums-->
+<div id="error" style="color: red"></div>
+
+<!-- ja strādājam ar formu tad pogu labāk veidot kā submit nevis button-->
+<input type="submit" name="submit" value="Reģistrēties">
+</form>
+
+<!-- links jānorāda ar theamleaf palīdzību nevis pa tiešo -->
+<script th:src="@{/registration.js}" type="text/javascript"></script>
+</body>
+</html>
